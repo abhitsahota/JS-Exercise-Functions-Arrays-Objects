@@ -300,9 +300,13 @@ const argTimesTwo = (num) => (num * 2);
  *         (2) returns the updated value of the `odometer`.
 */
 function carMaker(odometerArg) {
-  Obj = {
+  carObj = {
+    drive: function drive(distance) {
+      return carObj.odometer += distance;
+    },
     odometer: odometerArg,
   }
+  return carObj
 }
 
 /// ////// END OF CHALLENGE /////////
